@@ -15,13 +15,8 @@ def filter_rainy_days(daily_weather: list) -> list:
 
 
 def sort_by_date(days: list) -> list:
-    sorted_days: list = sorted(days, key=lambda s: int(s), reverse=True)
+    sorted_days: list = sorted(days, key=lambda s: int(s['dt']), reverse=True)
     return sorted_days
-
-
-def humanize_unixtime(unix_time):
-    time = datetime.datetime.fromtimestamp(int(unix_time)).strftime('%d-%m-%Y %H.%M')
-    return time
 
 
 def extract_date_from_day(day: dict) -> str:
