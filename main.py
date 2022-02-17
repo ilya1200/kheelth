@@ -25,8 +25,8 @@ def extract_date_from_day(day: dict) -> str:
 
 if __name__ == '__main__':
     weather_data: list = get_daily_weather(WEATHER_JSON)
+    weather_data = sort_by_date(weather_data)
     rainy_days: list = filter_rainy_days(weather_data)
-    rainy_days: list = sort_by_date(rainy_days)
 
     response: dict = {
         "Answer": "Yes" if len(rainy_days) else "No",
