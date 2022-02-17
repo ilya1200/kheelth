@@ -33,4 +33,5 @@ if __name__ == '__main__':
         "Date": extract_date_from_day(rainy_days[0] if len(rainy_days) else weather_data[-1])
     }
 
+    print(response)
     # write_to_webhook(json_result)
